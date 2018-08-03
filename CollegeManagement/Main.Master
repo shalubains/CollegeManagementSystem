@@ -1,0 +1,51 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Main.master.cs" Inherits="CollegeManagement.Main" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <link rel="stylesheet" href="Content/bootstrap.css" type="text/css" />
+
+    <style>
+        .navbar-items {
+           margin-left: 40px;
+       }
+
+       #MainNavBar {
+           height: 100px;
+       }
+
+       .content {
+           margin-top:110px;
+       }
+    </style>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form runat="server">
+    <div>
+        <div class="container">
+            <nav class="navbar navbar-expand bg-dark fixed-top" id="MainNavBar">
+                    <div class="container">
+                        <div class="navbar-brand text-light">Logo Here!</div>
+                        
+                    </div>
+                </nav>
+            
+            <div class="content">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        </asp:ContentPlaceHolder>
+                     </div>
+                </div>
+            </div>
+               
+        </div>
+    </div>
+        </form>
+</body>
+</html>

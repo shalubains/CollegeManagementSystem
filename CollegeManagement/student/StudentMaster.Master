@@ -1,0 +1,77 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="StudentMaster.master.cs" Inherits="CollegeManagement.student.StudentMaster" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <link rel="stylesheet" href="~/Content/bootstrap.css" type="text/css" />
+
+    <style>
+        .navbar-items-top {
+            margin-left: 40px;
+        }
+
+        #MainNavBar {
+            height: 100px;
+        }
+
+        .content {
+            margin-top: 100px;
+            margin-left: 100px;
+        }
+
+        .navbar-vertical {
+            width: 140px;
+            position: fixed;
+            height: 100%;
+            margin-left: 0;
+        }
+    </style>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <div>
+
+        <form runat="server">
+            <nav class="navbar navbar-expand bg-dark fixed-top" id="MainNavBar">
+                <div class="container">
+                    <div class="navbar-brand text-light">Logo Here!</div>
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item ">
+                            <asp:Label ID="lblUserWelcome" runat="server" class="text-light"></asp:Label></li>
+                        <li class="nav-item ">
+                            <asp:LinkButton runat="server" ID="lnkLogout" CssClass="nav-item text-light navbar-items-top" OnClick="lnkLogout_Click" CausesValidation="false">Logout</asp:LinkButton></li>
+                    </ul>
+                </div>
+            </nav>
+
+            <!-- Vertical navbar -->
+
+            <nav class="navbar bg-dark navbar-vertical">
+                <ul class="navbar-nav mb-auto ml-auto mr-auto">
+
+                    <li class="nav-item"><a class="nav-link text-light" href="ViewStudentAcademicDetails.aspx">Academic Details</a></li>
+                    <li class="nav-item"><a class="nav-link text-light" href="StudentFeePayment.aspx">Fee Payment</a></li>
+                    <li class="nav-item"><a class="nav-link text-light" href="StudentDashboard.aspx">Personal Details</a></li>
+                    <li class="nav-item"><a class="nav-link text-light" href="Events.aspx">College Events</a></li>
+                </ul>
+            </nav>
+
+            <div class="container">
+
+                <div class="content">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                            </asp:ContentPlaceHolder>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
